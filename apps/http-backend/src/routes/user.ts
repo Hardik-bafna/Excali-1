@@ -44,10 +44,10 @@ userRouter.post("/SignIn",async(req :Request,res:Response)=>{
     return res.status(200).json({ token });
   } catch (e :any) {
     if (e.name === "ZodError") {
-      return (res as any).status(400).json({ message: e.errors.map((err :any) => err.message) });
+      return (res as Response).status(400).json({ message: e.errors.map((err :any) => err.message) });
     }
     console.error("Signin error:", e);
-    return (res as any).status(500).json({ message: "Signin failed" });
+    return (res as Response).status(500).json({ message: "Signin failed" });
   }
 })
 userRouter.post("/Room",mid,async(req,res)=>{
