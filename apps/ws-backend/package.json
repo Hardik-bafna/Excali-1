@@ -9,7 +9,8 @@
     "dev": "pnpm run build && pnpm run start"
   },
   "dependencies": {
-   
+    "@types/jsonwebtoken": "^9.0.10",
+    "jsonwebtoken": "^9.0.3",
     "ws": "^8.19.0"
   },
   "keywords": [],
@@ -17,8 +18,8 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@repo/backend-common": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/ws": "^8.18.1",
-    "@repo/backend-common":"workspace:*"
+    "@types/ws": "^8.18.1"
   }
 }
